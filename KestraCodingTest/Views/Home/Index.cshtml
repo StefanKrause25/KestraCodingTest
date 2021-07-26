@@ -1,0 +1,97 @@
+﻿@model IEnumerable<KestraCodingTest.Models.PetFormModel>
+@{
+
+    ViewData["Title"] = "Home Page";
+}
+
+<center class="text-center">
+    <h1 class="display-4">Share Your Pet!</h1>
+</center>
+<div class="row">
+
+    <div class="col-md-9 col-12">
+        Lorem Ipsum dolor
+
+        Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+        Lorem Ipsum dolor
+
+        Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        Lorem Ipsum dolor sit amet
+        consectetur adipiscing elit
+        Lorem Ipsum dolor
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+        Ut enim ad minim veniam
+        Lorem Ipsum dolor
+
+        Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div class="col-md-3 col-12">
+        <img src="https://via.placeholder.com/300" width="300" height="300" />
+    </div>
+</div>
+
+
+
+<div class="row">
+    
+    <div class="col-12">
+        <br />
+        @Html.ActionLink("Share A New Pet!", "Create", "PetFormModels", null, new { @class = "btn btn-primary btn-large" })
+        <br /><br />
+    </div>
+
+
+
+    <div class="col-12">
+        <div style="overflow-x:auto">
+            <table class="table" display="inline-block">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.FirstName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LastName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PetName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PetAge)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.PetType)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.FirstName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LastName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PetName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PetAge)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.PetType)
+                            </td>
+                            
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
